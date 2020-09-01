@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
 /*-----Basic reset---*/
 *{
     padding: 0;
@@ -7,8 +9,10 @@
 /*-----Global---*/
 
 body{ 
-     font: 400 18px arial, sans-serif; 
-     background-color: #f3f1f1;    }
+    background-color: #f3f1f1;    
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;  }
 
 .container{
     max-width: 90%;
@@ -38,6 +42,11 @@ h2 {
 h3{
     font-size: 19px;
     margin-bottom: 5px; }
+
+ h4{
+    font-size: 14px;
+    margin-bottom: 5px;
+    }
 
 /*-----Paragrapgh---*/
 
@@ -141,7 +150,7 @@ p{
     padding: 10px;
     display: flex;  }
 
-.author-content p{
+.author-content h4{
     align-self: center;
     padding: 10px;   }
 
@@ -167,70 +176,40 @@ footer p {
  /*---Media Queries--*/ 
 
 
-@media screen and (max-width: 768px){
-    .main__nav ul{  padding-top: 10px;  }
-    .main__nav ul li{  padding: 10px 3px; }
-    .main__nav ul a{   padding: 5px 3px;   }
-
-    .main-h1{
-         font-size: 2rem;
-        max-width: 700px;
-        padding: 7rem 0;  }
-
-        .main-content2 img {  height: 115px;  }
-        .author-content img { height: 80px;   }
-}
-
-
-@media screen and (max-width: 700px){
-    body{ font-size: 16px; }
-    h1 {
-        font-size: 25px;
-        margin-bottom: 10px;     }
-    
-    
-    h2 {
-        font-size: 18px;
-        margin:8px 0;   }
-
-    h3{
-        font-size: 15px;
-        margin-bottom: 3px;   }
-    
-    .main-content h5{
-        position: initial;   }
-
-
-}
-
-
-@media screen and (max-width: 480px){
+@media screen and (min-width: 310px) and  (max-width:769px){
     .flex-container{
         flex-direction: column;   }
-
      header{
-         flex-direction: column;
-     }
+         flex-direction: column;  }
+    .main__nav ul{
+            flex-direction: column;
+            text-align: center;  }
      .main__nav ul li {
         padding: 8px 5px;
         margin: 5px 0;
         background-color: rgba(0, 0, 0, 0.671);  }
 
-     .main-content{
-        flex-basis: 100%;
-        margin-bottom: 30px;
-    }   
+    h1 {
+        font-size: 25px;
+        margin-bottom: 10px;   }
+    h2 {
+        font-size: 18px;
+        margin:8px 0;   }
+    h3{
+        font-size: 15px;
+        margin-bottom: 3px;   }
+    h4{ font-size:12px;}    
 
+    .main-content h5{
+        position: unset;   }
+    .main-content{
+        flex-basis: 100%;
+        margin-bottom: 30px;  }
+    .main-content2 img {  height: 60px;  }
+    .author-content img { height: 40px;   }
+    
     .aside-content{
-        flex-basis: 100%;
-
-    }
-
-    .main-content2 img {  height: 80px;  }
-    .author-content img { height: 50px;   }
-
-      .main__nav ul{
-        flex-direction: column;
-        text-align: center;  }
-
+        width: 100%;  }
 }
+
+
